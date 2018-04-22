@@ -5,17 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".PocetnoActivity"
-    tools:showIn="@layout/activity_pocetno">
+    tools:context=".VtoraStrana"
+    tools:showIn="@layout/activity_vtora_strana">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/MyRV"
-        android:scrollbars="vertical"
-        android:scrollbarSize="3dp"
-        android:scrollbarStyle="outsideOverlay"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </android.support.v7.widget.RecyclerView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin"
+        android:text="@string/large_text" />
 
 </android.support.v4.widget.NestedScrollView>
