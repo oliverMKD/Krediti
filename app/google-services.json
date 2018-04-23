@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "718969326755",
+    "firebase_url": "https://krediti-86e8a.firebaseio.com",
+    "project_id": "krediti-86e8a",
+    "storage_bucket": "krediti-86e8a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718969326755:android:9187bbadd5f94a81",
+        "android_client_info": {
+          "package_name": "com.oliver.krediti"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "718969326755-1oksr4ss598ivpjdtd1pcf54hk2eluq1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRXrUku4jx5vexX6bnONIQ9y4yIEhQCp4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
