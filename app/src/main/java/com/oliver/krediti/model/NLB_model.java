@@ -7,4 +7,5 @@ import java.util.ArrayList;
 public class NLB_model {
 
     ArrayList<NLB> nlb = new ArrayList<>();
+    
 }
