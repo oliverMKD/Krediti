@@ -10,13 +10,13 @@ public class NLB implements Serializable {
     String potr;
     String stanben;
 
-    public NLB(String auto, String depozit, String hipotek, String potr, String stanben) {
-        this.auto = auto;
-        this.depozit = depozit;
-        this.hipotek = hipotek;
-        this.potr = potr;
-        this.stanben = stanben;
-    }
+//    public NLB(String auto, String depozit, String hipotek, String potr, String stanben) {
+//        this.auto = auto;
+//        this.depozit = depozit;
+//        this.hipotek = hipotek;
+//        this.potr = potr;
+//        this.stanben = stanben;
+//    }
 
     public String getAuto() {
         return auto;
