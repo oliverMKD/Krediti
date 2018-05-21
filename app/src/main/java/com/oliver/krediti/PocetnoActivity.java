@@ -170,7 +170,7 @@ import butterknife.ButterKnife;
      protected void onResume() {
          super.onResume();
 
-         database.child("Banki").child("NLB").child("Krediti").child("Potrosuvacki").addValueEventListener(new ValueEventListener() {
+         database.child("Banki").child("Krediti").addValueEventListener(new ValueEventListener() {
              @Override
              public void onDataChange(DataSnapshot dataSnapshot) {
                  List<Banki> notes = new ArrayList<>();
