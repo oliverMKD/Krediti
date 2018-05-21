@@ -4,18 +4,30 @@ import java.io.Serializable;
 
 public class NLB implements Serializable {
 
-    String auto;
-    String depozit;
-    String hipotek;
-    String potr;
-    String stanben;
+    public String auto;
+    public String depozit;
+    public String hipotek;
+    public String potr;
+    public String stanben;
+    public String pederski;
 
-    public NLB(String auto, String depozit, String hipotek, String potr, String stanben) {
+
+    public String getPederski() {
+        return pederski;
+    }
+
+    public void setPederski(String pederski) {
+        this.pederski = pederski;
+    }
+
+    public NLB(String auto, String depozit, String hipotek, String potr, String stanben, String pederski) {
         this.auto = auto;
         this.depozit = depozit;
         this.hipotek = hipotek;
         this.potr = potr;
         this.stanben = stanben;
+        this.pederski = pederski;
+
     }
 
     public String getAuto() {
@@ -56,5 +68,8 @@ public class NLB implements Serializable {
 
     public void setStanben(String stanben) {
         this.stanben = stanben;
+    }
+
+    public NLB() {
     }
 }

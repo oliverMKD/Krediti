@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TretaStrana">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="VIOLETOV"
+        android:id="@+id/tekst1"/>
+    <TextView
+        android:layout_below="@+id/tekst1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="SREBREN"
+        android:id="@+id/tekst2"/>
+    <TextView
+        android:layout_below="@+id/tekst2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="POTROSUVACKI"
+        android:id="@+id/tekst3"/>
+
+</RelativeLayout>

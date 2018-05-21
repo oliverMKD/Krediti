@@ -8,8 +8,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.oliver.krediti.BankiActivity;
 import com.oliver.krediti.R;
+import com.oliver.krediti.klasi.Banki;
 import com.oliver.krediti.klasi.Krediti;
+import com.oliver.krediti.klasi.NLB;
 import com.oliver.krediti.listeners.OnRowKrediti;
 
 import java.util.ArrayList;
@@ -21,17 +24,18 @@ import butterknife.OnClick;
 
 public class Krediti_adapter extends RecyclerView.Adapter<Krediti_adapter.ViewHolder> {
     Context context;
-    List<Krediti> kreditiList = new ArrayList<>();
-    OnRowKrediti onClick;
+    private List<Banki> notes;
+    Banki banki;
+    TextView textView;
 
-    public void setItems(List<Krediti> krediti) {
-        kreditiList = krediti;
-    }
-    public Krediti_adapter(List<Krediti> kreditiList,Context context1,OnRowKrediti onRowKrediti) {
-        this.kreditiList = kreditiList;
-        this.context = context1;
-        this.onClick = onRowKrediti;
-    }
+//    public void setItems(ArrayList<NLB> _nlbs) {
+//        nlbs = _nlbs;
+//    }
+//    public Krediti_adapter( ArrayList<NLB>nlbs1,Context context1,OnRowKrediti onRowKrediti) {
+//        this.nlbs = nlbs1;
+//        this.context = context1;
+//        this.onClick = onRowKrediti;
+//    }
 //    public Krediti_adapter(Context context2){
 //        context = context2;
 //    }
@@ -39,6 +43,12 @@ public class Krediti_adapter extends RecyclerView.Adapter<Krediti_adapter.ViewHo
 //        this.onClick = onClick1;
 //    }
 
+
+
+
+    public Krediti_adapter(List<Banki> notes) {
+        this.notes = notes;
+    }
     @Override
     public Krediti_adapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Context context = parent.getContext();
@@ -51,29 +61,46 @@ public class Krediti_adapter extends RecyclerView.Adapter<Krediti_adapter.ViewHo
 
     @Override
     public void onBindViewHolder(Krediti_adapter.ViewHolder holder,  final int position) {
-        final Krediti krediti5 = kreditiList.get(position);
-        holder.textView.setText(krediti5.getNaziv());
-
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                    onClick.onRowClick(krediti5,position);
-            }
-        });
+        Banki banki = notes.get(position);
+        holder.textView.setText(banki.getMax_iznos());
     }
 
     @Override
     public int getItemCount() {
-        return kreditiList.size();
+        if (notes==null){
+            return 0;
+        }else
+        return notes.size();
     }
 
+    public void updateList(List<Banki> notes) {
+        // Allow recyclerview animations to complete normally if we already know about data changes
+        if (notes.size() != this.notes.size() || !this.notes.containsAll(notes)) {
+            this.notes = notes;
+            notifyDataSetChanged();
+        }
+    }
+
+    public void removeItem(int position) {
+        notes.remove(position);
+        notifyItemRemoved(position);
+    }
+
+    public Banki getItem(int position) {
+        return notes.get(position);
+    }
     public class ViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.text_na_krediti)
         TextView textView;
 
         public ViewHolder(View itemView) {
             super(itemView);
+
             ButterKnife.bind(this,itemView);
         }
+    }
+    public void bind(Banki note) {
+        this.banki = note;
+        textView.setText(note.getMax_iznos());
     }
 }

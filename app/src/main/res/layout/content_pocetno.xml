@@ -14,8 +14,37 @@
         android:scrollbarSize="3dp"
         android:scrollbarStyle="outsideOverlay"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"/>
 
-    </android.support.v7.widget.RecyclerView>
+    <!--</android.support.v7.widget.RecyclerView>-->
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:id="@+id/tekst1"/>-->
+    <!--<TextView-->
+        <!--android:layout_below="@+id/tekst1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:id="@+id/tekst2"/>-->
+    <!--<TextView-->
+        <!--android:layout_below="@+id/tekst2"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:id="@+id/tekst3"/>-->
+    <!--<TextView-->
+        <!--android:layout_below="@+id/tekst3"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:id="@+id/tekst4"/>-->
+    <!--<TextView-->
+        <!--android:layout_below="@+id/tekst4"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:id="@+id/tekst5"/>-->
+    <!--</RelativeLayout>-->
 
 </android.support.v4.widget.NestedScrollView>
